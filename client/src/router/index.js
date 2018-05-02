@@ -7,10 +7,12 @@ import Register from '@/components/Register'
 import Login from '@/components/Login'
 
 import BlockchainStatus from '@/components/BlockchainStatus'
+import Home from '@/components/Home'
 import GuestHome from '@/components/GuestHome'
 import EntityHome from '@/components/EntityHome'
 import TeamHome from '@/components/TeamHome'
 import BusinessHome from '@/components/BusinessHome'
+import AdminHome from '@/components/AdminHome'
 
 import TechUsed from '@/components/TechUsed'
 import Blockchain from '@/components/Blockchain'
@@ -36,6 +38,12 @@ export default new Router({
       component: Login
     },
     {
+      path: '/users/home',
+      name: 'normal user home',
+      component: Home,
+      beforeEnter: (to, from, next) => authHook(to, from, next, 'user')
+    },
+    {
       path: '/users/entity/home',
       name: 'entity home',
       component: EntityHome,
@@ -52,6 +60,12 @@ export default new Router({
       name: 'business home',
       component: BusinessHome,
       beforeEnter: (to, from, next) => authHook(to, from, next, 'business')
+    },
+    {
+      path: '/users/admin/home',
+      name: 'admin home',
+      component: AdminHome,
+      beforeEnter: (to, from, next) => authHook(to, from, next, 'admin')
     },
     {
       path: '/admin/tech-used',
