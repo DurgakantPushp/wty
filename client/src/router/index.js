@@ -6,7 +6,7 @@ import auth from '../auth'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
 
-import Home from '@/components/Home'
+import BlockchainStatus from '@/components/BlockchainStatus'
 import GuestHome from '@/components/GuestHome'
 import EntityHome from '@/components/EntityHome'
 import TeamHome from '@/components/TeamHome'
@@ -66,10 +66,10 @@ export default new Router({
       beforeEnter: (to, from, next) => authHook(to, from, next, 'admin')
     },
     {
-      path: '/home1',
+      path: '/admin/blockchain/status',
       name: 'Guest Home',
-      component: Home,
-      beforeEnter: (to, from, next) => authHook(to, from, next, 'entity')
+      component: BlockchainStatus,
+      beforeEnter: (to, from, next) => authHook(to, from, next, 'admin')
     }
   ],
   redirect: {
