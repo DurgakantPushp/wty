@@ -73,28 +73,39 @@
                   type="radio"
                   class="inRole"
                   name="role"
-                  value="User"
+                  value="user"
+                  v-model="userInfo.role"
                   checked required
                 > User
                 <input
                   type="radio"
                   class="inRole"
-                  value="BusinessUser"
+                  value="business"
+                  v-model="userInfo.role"
                   required
                 > Business User
                 <br>
                 <input
                   type="radio"
                   class="inRole"
-                  value="Entity"
+                  value="entity"
+                  v-model="userInfo.role"
                   required
                 >Entity
                 <input
                   type="radio"
                   class="inRole"
-                  value="WTYTeam"
+                  value="team"
+                  v-model="userInfo.role"
                   required
                 > WTY Team
+                <input
+                  type="radio"
+                  class="inRole"
+                  value="admin"
+                  v-model="userInfo.role"
+                  required
+                >Admin
                 <br>
               </div>
               <br>
@@ -219,7 +230,7 @@ export default {
         userName: this.userInfo.userName,
         password: this.userInfo.password
       }
-      auth.Signup(this, userInfo, '/home')
+      auth.Signup(this, userInfo)
     },
     cancel(){
       console.log("cancelled")
