@@ -53,7 +53,11 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 import auth from '../auth'
+
+axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('id_token')
 
 export default {
   data () {
@@ -67,13 +71,12 @@ export default {
     sendGratitude () {
       let dataGrat = {
         recipient: this.recipient,
-        msgGrat: this.msgGrat
+        cnt: this.msgGrat
       }
       console.log('send gratitude called', dataGrat)
-
       axios.post('/api/users/gratitudes',
-        dataGrat,
-        {headers: auth.getAuthHeader()})
+        dataGrat)
+       // {headers: auth.getAuthHeader()})
       .then((response) => {
         console.log('response is', response)
       },
