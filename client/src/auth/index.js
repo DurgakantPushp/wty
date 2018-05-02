@@ -7,13 +7,14 @@ const LOGIN_URL = API_URL + '/users/login'
 const SIGNUP_URL = API_URL + '/users/signup'
 
 export default {
-  Signup(context, creds, redirect) {
+  Signup(context, creds) {
     axios.post(SIGNUP_URL, creds).then((response) => {
-      localStorage.setItem('id_token', response.body.id_token)
-     
-      if (redirect) {
-        context.$router.replace(redirect)
-      }
+      localStorage.setItem('id_token', response.data.id_token)
+
+      var decoded = jwt_decode(response.data.id_token)
+      console.log('decoded is ', decoded)
+
+      redirect(context, decoded.role)
     }, (error) => {
       console.log('signup error', error)
       context.error = error
@@ -26,26 +27,7 @@ export default {
       var decoded = jwt_decode(response.data.id_token)
       console.log('decoded is ', decoded)
 
-      switch (decoded.role) {
-        case 'user':
-          context.$router.replace('/users/home')         
-          break
-        case 'entity':
-          context.$router.replace('/users/entity/home')
-          break
-        case 'business':
-          context.$router.replace('/users/business/home')
-          break
-        case 'team':
-          context.$router.replace('/users/wty-team/home')
-          break
-        case 'admin':
-          context.$router.replace('/users/admin/home')
-          break
-        default:
-          console.log('invalid role received', decoded.role)
-          break
-      }
+      redirect(context, decoded.role)
     }, (error) => {
       console.log('login error', error)
       context.error = error
@@ -74,3 +56,26 @@ export default {
   }
 }
 
+// redirect redirects as per role
+function redirect(context, role) {
+  switch (role) {
+    case 'user':
+      context.$router.replace('/users/home')
+      break
+    case 'entity':
+      context.$router.replace('/users/entity/home')
+      break
+    case 'business':
+      context.$router.replace('/users/business/home')
+      break
+    case 'team':
+      context.$router.replace('/users/wty-team/home')
+      break
+    case 'admin':
+      context.$router.replace('/users/admin/home')
+      break
+    default:
+      console.log('invalid role received', role)
+      break
+  }
+}
