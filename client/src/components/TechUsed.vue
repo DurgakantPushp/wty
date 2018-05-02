@@ -10,14 +10,14 @@
         <div class="w3-right w3-hide-small">
           <a href="#about" class="w3-bar-item w3-button">TECHNOLOGY USED</a>
           <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-      
+
           <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
             <i class="fa fa-bars"></i>
           </a>
         </div>
       </div>
     </div>
-      
+
     <!-- Sidebar on small screens when clicking the menu icon -->
     <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
       <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
@@ -27,7 +27,7 @@
     <!-- Used Technology Description Section -->
     <div class="w3-container" style="padding:128px 16px" id="about">
             <h3 class="w3-center">ABOUT THE FRONTEND TECHNOLOGY INVOLVED</h3>
-            
+
             <div class="w3-row-padding w3-center" style="margin-top:64px">
               <div class="w3-quarter">
                     <img src = "vuejs.png" >
@@ -57,9 +57,8 @@
 
     <div class="w3-container" style="padding:128px 16px" id="about">
       <h3 class="w3-center">BACKEND TECHNOLOGY INVOLVED</h3>
-      
       <div class="w3-row-padding w3-center" style="margin-top:64px">
-        
+
         <div class="w3-quarter">
           <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
           <p class="w3-large">Design</p>

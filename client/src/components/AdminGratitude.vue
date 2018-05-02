@@ -15,7 +15,7 @@
                 <span class="glyphicon glyphicon-id"></span>
                 id
               </label>
-              <button 
+              <button
                 class="btn btn-info"
               >{{grat.id}}
               </button>
@@ -25,7 +25,7 @@
                 <span class="glyphicon glyphicon-user"></span>
                 Sender
               </label>
-              <button 
+              <button
                 class="btn btn-primary"
               >{{grat.sender}}
               </button>
@@ -35,7 +35,7 @@
                 <span class="glyphicon glyphicon-user"></span>
                 Recipient
               </label>
-              <button 
+              <button
                 class="btn btn-info"
               >{{grat.recipient}}
               </button>
@@ -45,7 +45,7 @@
                 <span class="glyphicon glyphicon-cnt"></span>
                 Content
               </label>
-              <button 
+              <button
                 class="btn btn-success"
               >{{grat.cnt}}
               </button>
@@ -53,8 +53,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" 
-          class="btn btn-danger btn-default pull-left" 
+          <button type="submit"
+          class="btn btn-danger btn-default pull-left"
           data-dismiss="modal">
             <span class="glyphicon glyphicon-remove"></span>
             Cancel

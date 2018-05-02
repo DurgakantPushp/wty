@@ -22,14 +22,14 @@ import store from '../store'
 
 export default {
   props: ['blockData'],
- 
+
   methods: {
     showGrat () {
       let grat = JSON.parse(atob(this.blockData.data))
       store.commit('UpdateGrat', grat)
       $('#modalGrat').modal()
       console.log('show gratitude', grat)
-    } 
+    }
   }
 }
 </script>

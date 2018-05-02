@@ -9,88 +9,87 @@
         </a>
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small">
-              <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
-              <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
-              <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
-              <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
-              <a href="#sent" class="w3-bar-item w3-button"><i class="glyphicon glyphicon-eye-open"></i>ADD</a>
+          <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
+          <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
+          <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
+          <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
+          <a href="#sent" class="w3-bar-item w3-button"><i class="glyphicon glyphicon-eye-open"></i>ADD</a>
           <button class="w3-bar-item w3-button" id="myBtn3" type="button"><i class="fa fa-paper-plane"></i> SEND GRATITUDE</button>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-    
+
         <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
           <i class="fa fa-bars"></i>
         </a>
       </div>
     </div>
-          
+
     <!-- Sidebar on small screens when clicking the menu icon -->
-            <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-              <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-              <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-              <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
-              <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
-              <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
-              <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
-            <button class="w3-bar-item w3-button" id="myBtn2" type="button"><i class="fa fa-paper-plane"></i> SEND GRATITUDE</button>
-            </nav>
-          
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
+      <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
+      <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
+      <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">ADD</a>
+      <button class="w3-bar-item w3-button" id="myBtn2" type="button"><i class="fa fa-paper-plane"></i> SEND GRATITUDE</button>
+    </nav>
+
     <!-- Header with full-height image -->
     <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
 
         <!-- Team Section -->
     <div class="w3-container" style="padding:128px 16px" id="team">
-            <h3 class="w3-center">THE TEAM</h3>
-            <p class="w3-center w3-large"> bfhv sdib i yvsb ygydf uyufbfd</p>
-            <div class="w3-row-padding w3-grayscale" style="margin-top:64px;">
-              <div class="w3-col l3 m6 w3-margin-bottom" style="background-color:rgba(250, 246, 246, 0.719);">
-                <div class="w3-card">
-                  <img src="img_avatar1.png" alt="John" style="width:100%">
-                  <div class="w3-container">
-                    <h3>John Doe</h3>
-                    <p class="w3-opacity">CEO & Founder</p>
-                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                    <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-                  </div>
-                </div>
-              </div>
-              <div class="w3-col l3 m6 w3-margin-bottom" style="background-color:rgba(250, 246, 246, 0.432);">
-                <div class="w3-card">
-                  <img src="img_avatar2.png" alt="Jane" style="width:100%">
-                  <div class="w3-container">
-                    <h3>Anja Doe</h3>
-                    <p class="w3-opacity">Art Director</p>
-                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                    <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-                  </div>
-                </div>
-              </div>
-              <div class="w3-col l3 m6 w3-margin-bottom" style="background-color:rgba(250, 246, 246, 0.432);">
-                <div class="w3-card">
-                  <img src="../assets/img_avatar3.jpeg" alt="Mike" style="width:100%">
-                  <div class="w3-container">
-                    <h3>Mike Ross</h3>
-                    <p class="w3-opacity">Web Designer</p>
-                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                    <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-                  </div>
-                </div>
-              </div>
-              <div class="w3-col l3 m6 w3-margin-bottom" style="background-color:rgba(250, 246, 246, 0.432);">
-                <div class="w3-card">
-                  <img src="../assets/img_avatar4.jpeg" alt="Dan" style="width:100%">
-                  <div class="w3-container">
-                    <h3>Dan Star</h3>
-                    <p class="w3-opacity">Designer</p>
-                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                    <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-                  </div>
-                </div>
-              </div>
+      <h3 class="w3-center">THE TEAM</h3>
+      <p class="w3-center w3-large"> bfhv sdib i yvsb ygydf uyufbfd</p>
+      <div class="w3-row-padding w3-grayscale" style="margin-top:64px;">
+        <div class="w3-col l3 m6 w3-margin-bottom" style="background-color:rgba(250, 246, 246, 0.719);">
+          <div class="w3-card">
+            <img src="img_avatar1.png" alt="John" style="width:100%">
+            <div class="w3-container">
+              <h3>John Doe</h3>
+              <p class="w3-opacity">CEO & Founder</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
             </div>
           </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom" style="background-color:rgba(250, 246, 246, 0.432);">
+          <div class="w3-card">
+            <img src="img_avatar2.png" alt="Jane" style="width:100%">
+            <div class="w3-container">
+              <h3>Anja Doe</h3>
+              <p class="w3-opacity">Art Director</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom" style="background-color:rgba(250, 246, 246, 0.432);">
+          <div class="w3-card">
+            <img src="../assets/img_avatar3.jpeg" alt="Mike" style="width:100%">
+            <div class="w3-container">
+              <h3>Mike Ross</h3>
+              <p class="w3-opacity">Web Designer</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom" style="background-color:rgba(250, 246, 246, 0.432);">
+          <div class="w3-card">
+            <img src="../assets/img_avatar4.jpeg" alt="Dan" style="width:100%">
+            <div class="w3-container">
+              <h3>Dan Star</h3>
+              <p class="w3-opacity">Designer</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </header>
-
 
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64">

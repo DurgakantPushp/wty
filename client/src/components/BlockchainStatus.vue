@@ -66,5 +66,3 @@ export default {
   line-height: 1.42857;
 }
 </style>
-
-

@@ -11,7 +11,7 @@
             <form role="form">
               <div class="form-group">
                 <label>First Name*</label><br>
-                <input 
+                <input
                   type="text"
                   class="form-control"
                   placeholder="Enter First Name"
@@ -21,7 +21,7 @@
                 <br>
                 <label>Middle Name</label>
                 <br>
-                <input 
+                <input
                   type="text"
                   class="form-control"
                   placeholder="Enter Middle Name"
@@ -31,7 +31,7 @@
                 <br>
                 <label>Last Name*</label>
                 <br>
-                <input 
+                <input
                   type="text"
                   class="form-control"
                   placeholder="Enter Last Name"
@@ -44,20 +44,20 @@
               <div class="form-group">
                 <label style=" color:Black;">Gender</label>
                 <br>
-                <input 
+                <input
                   type="radio"
                   class="inGender"
                   name="gender"
                   value="Male"
                   checked required
                 > Male
-                <input 
+                <input
                   class="inGender"
                   type="radio"
                   name="gender"
                   value="Female"
                 > Female
-                <input 
+                <input
                   class="inGender"
                   type="radio"
                   value="Other"
@@ -75,21 +75,21 @@
                   name="role"
                   value="User"
                   checked required
-                > User 
-                <input 
+                > User
+                <input
                   type="radio"
                   class="inRole"
                   value="BusinessUser"
                   required
                 > Business User
                 <br>
-                <input 
+                <input
                   type="radio"
                   class="inRole"
                   value="Entity"
                   required
                 >Entity
-                <input 
+                <input
                   type="radio"
                   class="inRole"
                   value="WTYTeam"
@@ -103,7 +103,7 @@
                   <span class="glyphicon glyphicon-user"></span>
                   Email id*
                 </label>
-                <input 
+                <input
                   type="text"
                   class="form-control"
                   id="email"
@@ -112,13 +112,13 @@
                   required
                 >
               </div>
-              
+
               <div class="form-group">
                 <label for="username">
                   <span class="glyphicon glyphicon-user"></span>
                   Username*
                 </label>
-                <input 
+                <input
                   type="text"
                   class="form-control"
                   id="username"
@@ -134,8 +134,8 @@
                   Password*
                 </label>
                 <input
-                  type="password" 
-                  class="form-control" 
+                  type="password"
+                  class="form-control"
                   id="psw"
                   v-model="userInfo.password"
                   placeholder="Enter password"
@@ -147,10 +147,10 @@
                   <span class="glyphicon glyphicon-eye-open"></span>
                   Again Password
                 </label>
-                <input 
-                  type="password" 
-                  class="form-control" 
-                  id="pswr" 
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pswr"
                   placeholder="Confirm password"
                 >
               </div>
@@ -162,7 +162,7 @@
               </div>
                 <button
                   id="btnReg"
-                  class="btn btn-success btn-block" 
+                  class="btn btn-success btn-block"
                   @click.prevent="submit"
                 >
                   <span class="glyphicon glyphicon-off"></span>
@@ -171,8 +171,8 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button 
-              class="btn btn-danger btn-default pull-left" 
+            <button
+              class="btn btn-danger btn-default pull-left"
               data-dismiss="modal"
               @click="cancel"
             >
@@ -245,7 +245,7 @@ export default {
 }
 .inGender {
   margin-left:135px;
-  color:white 
+  color:white
 }
 </style>
 

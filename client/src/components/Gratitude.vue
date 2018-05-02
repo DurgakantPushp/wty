@@ -1,7 +1,6 @@
 <template>
 <div class="modal fade" id="modalGrat" role="dialog">
   <div class="modal-dialog">
-    <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -14,21 +13,24 @@
               <span class="glyphicon glyphicon-user"></span>
               Receiver's Name
             </label>
-            <input 
-              type="text" 
-              class="form-control" 
-              id="usr" 
-              placeholder="Enter receiver's email/User ID/Profile Name">
+            <input
+              type="text"
+              class="form-control"
+              id="usr"
+              v-model="recipient"
+              placeholder="Enter receiver's email/User ID/Profile Name"
+            >
           </div>
           <div class="form-group">
             <label for="msg">
               <span class="glyphicon fa fa-envelope"></span>
               Your Gratitude
             </label>
-            <input 
+            <input
               type="text"
               class="form-control"
               id="msg"
+              v-model="msgGrat"
               placeholder="Type your message"
             >
           </div>
@@ -42,10 +44,10 @@
           </button>
         </form>
       </div>
-      <div class="modal-header">
+      <div class="modal-footer">
         <h4><img src = "../assets/wty_white_logo-home.png"></h4>
       </div>
-    </div>   
+    </div>
   </div>
 </div>
 </template>
@@ -63,12 +65,13 @@ export default {
   },
   methods: {
     sendGratitude () {
-      console.log('send gratitude called')
-      dataGrat = {
+      let dataGrat = {
         recipient: this.recipient,
         msgGrat: this.msgGrat
-      },
-      axios.post('/api/users/ajay/gratitudes',
+      }
+      console.log('send gratitude called', dataGrat)
+
+      axios.post('/api/users/gratitudes',
         dataGrat,
         {headers: auth.getAuthHeader()})
       .then((response) => {

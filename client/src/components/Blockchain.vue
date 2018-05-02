@@ -8,7 +8,7 @@
         <th>Prev Hash</th>
         <th>Data</th>
       </tr>
-        <block 
+        <block
           :blockData="block"
           :key="block.timestamp"
           v-for="block of blocks">
@@ -28,7 +28,7 @@ export default {
     block: Block,
     gratitude: AdminGratitude
   },
-  
+
   computed: {
     blocks() {
       return store.state.blocks

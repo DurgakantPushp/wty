@@ -1,9 +1,9 @@
 <template>
-<div id="entityHome"> 
+<div id="entityHome">
   <!-- Navbar (sit on top) -->
   <div class="w3-top">
     <div style = "color:#fff!important;background-color:rgb(6, 110, 128)!important; padding:16px 16px" class="w3-bar w3-white w3-card" id="myNavbar">
-      <a href="#home" class="w3-bar-item w3-button w3-wide" 
+      <a href="#home" class="w3-bar-item w3-button w3-wide"
         style="margin-top: 0px; padding:0px 0px">
         <img src = "../assets/wty_white_logo-home.png">
       </a>
@@ -15,15 +15,15 @@
         <button class="w3-bar-item w3-button" id="myBtn3" type="button"><i class="fa fa-paper-plane"></i> SEND GRATITUDE</button>
       </div>
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-  
-      <a href="javascript:void(0)" 
+
+      <a href="javascript:void(0)"
         class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
         @click="w3_open">
         <i class="fa fa-bars"></i>
       </a>
     </div>
   </div>
-      
+
   <!-- Sidebar on small screens when clicking the menu icon -->
           <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
             <a href="#recent" class="w3-bar-item w3-button"><i class="glyphicon glyphicon-eye-open"></i> VIEW RECENT GRATITUDE</a>
@@ -31,7 +31,7 @@
             <a href="#sent" class="w3-bar-item w3-button"><i class="glyphicon glyphicon-eye-open"></i>VIEW SENT GRATITUDE</a>
             <button class="w3-bar-item w3-button" id="myBtn2" type="button"><i class="fa fa-paper-plane"></i> SEND GRATITUDE</button>
           </nav>
-        
+
   <!-- Header with full-height image -->
   <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
           <div class="w3-display-left w3-text-white" style="padding:48px">
@@ -40,7 +40,7 @@
             <span class="w3-large">WannaThankYou is new and unique social app<br> that helps you express
               gratitude and<br> show your appreciation.</span>
             <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Manage Your Profile</a></p>
-          </div> 
+          </div>
           <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
             <i class="fa fa-facebook-official w3-hover-opacity"></i>
             <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -50,7 +50,7 @@
             <i class="fa fa-linkedin w3-hover-opacity"></i>
           </div>
   </header>
-        
+
   <!-- Recent Gratitude Section -->
   <div class="w3-container bgimg-1" style="padding:128px 16px" id="recent">
           <h3 class="w3-center">Recent Gratitude</h3>
@@ -250,9 +250,9 @@
             <h4><img src = "wty_white_logo-home.png"></h4>
         </div>
       </div>
-      
+
     </div>
-  </div> 
+  </div>
 </div>
 </template>
 
@@ -265,7 +265,7 @@ export default {
   },
   methods: {
     w3_open () {
-      var mySidebar = document.getElementById("mySidebar")      
+      var mySidebar = document.getElementById("mySidebar")
       if (mySidebar.style.display === 'block') {
           mySidebar.style.display = 'none';
       } else {
@@ -273,7 +273,7 @@ export default {
       }
     },
     w3_close () {
-      var mySidebar = document.getElementById("mySidebar")      
+      var mySidebar = document.getElementById("mySidebar")
       mySidebar.style.display = "none";
     }
   }

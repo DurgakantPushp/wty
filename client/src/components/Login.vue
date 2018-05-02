@@ -19,7 +19,7 @@
                   <span class="glyphicon glyphicon-user"></span>
                   Username
                 </label>
-                <input 
+                <input
                   type="text"
                   class="form-control"
                   id="userName"
@@ -32,7 +32,7 @@
                   <span class="glyphicon glyphicon-eye-open"></span>
                   Password
                 </label>
-                <input 
+                <input
                   type="password"
                   class="form-control"
                   id="psw1"
@@ -42,15 +42,15 @@
               </div>
               <div class="checkbox">
                 <label>
-                  <input 
+                  <input
                     type="checkbox"
-                    value="" 
+                    value=""
                     checked
                   >
                     Remember me
                   </label>
               </div>
-              <button 
+              <button
                 class="btn btn-success btn-block"
                 id="btnLogin"
                 @click.prevent="login"
@@ -61,8 +61,8 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="submit" 
-            class="btn btn-danger btn-default pull-left" 
+            <button type="submit"
+            class="btn btn-danger btn-default pull-left"
             data-dismiss="modal">
               <span class="glyphicon glyphicon-remove"></span>
               Cancel
@@ -94,7 +94,7 @@ export default {
         userName: this.userInfo.userName,
         password: this.userInfo.password
       }
-      auth.Login(this, userInfo, '/home')
+      auth.Login(this, userInfo)
     }
   }
 }
@@ -112,5 +112,3 @@ export default {
   background-color:rgb(6, 110, 128)!important
 }
 </style>
-
-
