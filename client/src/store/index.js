@@ -7,7 +7,8 @@ const store = new Vuex.Store({
   state: {
     minors: 4,
     validators: 5,
-    blocks: []
+    blocks: [],
+    grat: {}
   },
   mutations: {
     IncrMinor (state) {
@@ -24,6 +25,10 @@ const store = new Vuex.Store({
       console.log('blocks received for update', sblock)
       let block = JSON.parse(sblock)
       state.blocks.push(block)
+    },
+    UpdateGrat (state, grat) {
+      console.log('grat updated', grat)
+      state.grat = grat
     }
   },
   strict: true

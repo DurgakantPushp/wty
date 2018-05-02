@@ -13,12 +13,14 @@ export default function Init () {
   let topicCentreBlocksInit = 'centre/blocks/init'
   let topicCentreBlocksUpdate = 'centre/blocks/update'
   let topicMinorsConnected = 'minors/connected'
+  let topicCentreBlocks = 'centre/blocks'
 
   client.on('connect', () => {
-    console.log('connected for subscribe', optMqtt)
+    console.log('connected ', optMqtt)
     client.subscribe(topicMinorsConnected)
     client.subscribe(topicCentreBlocksInit)
     client.subscribe(topicCentreBlocksUpdate)
+    client.publish(topicCentreBlocks, 'send')
   })
 
   client.on('message', (topic, message) => {

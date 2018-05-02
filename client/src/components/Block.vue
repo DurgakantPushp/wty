@@ -14,28 +14,21 @@
         </button>
       </td>
     </tr>
-    <gratitude :grat="grat"/>
   </div>
 </template>
 
 <script>
-import AdminGratitude from './AdminGratitude'
+import store from '../store'
 
 export default {
-  data () {
-    return {
-      grat: {}
-    }
-  },
   props: ['blockData'],
-  components: {
-    gratitude: AdminGratitude
-  },
+ 
   methods: {
     showGrat () {
-      this.grat = JSON.parse(atob(this.blockData.data))
+      let grat = JSON.parse(atob(this.blockData.data))
+      store.commit('UpdateGrat', grat)
       $('#modalGrat').modal()
-      console.log('show gratitude', this.grat)
+      console.log('show gratitude', grat)
     } 
   }
 }

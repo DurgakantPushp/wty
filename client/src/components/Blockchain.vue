@@ -1,7 +1,6 @@
 <template>
   <div>
     <table class="w3-table w3-striped w3-bordered w3-border">
-      <thead>
       <tr>
         <th>#</th>
         <th>Timestamp</th>
@@ -9,14 +8,12 @@
         <th>Prev Hash</th>
         <th>Data</th>
       </tr>
-      </thead>
-      <tbody>
         <block 
           :blockData="block"
-          :key="block.Timestamp"
+          :key="block.timestamp"
           v-for="block of blocks">
         </block>
-      </tbody>
+        <gratitude />
     </table>
   </div>
 </template>
@@ -24,11 +21,14 @@
 <script>
 import Block from './Block'
 import store from '../store'
+import AdminGratitude from './AdminGratitude'
 
 export default {
   components: {
-    block: Block
+    block: Block,
+    gratitude: AdminGratitude
   },
+  
   computed: {
     blocks() {
       return store.state.blocks
@@ -36,3 +36,22 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+

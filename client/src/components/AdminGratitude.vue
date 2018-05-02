@@ -12,6 +12,16 @@
           <form role="form">
             <div class="form-group">
               <label>
+                <span class="glyphicon glyphicon-id"></span>
+                id
+              </label>
+              <button 
+                class="btn btn-info"
+              >{{grat.id}}
+              </button>
+            </div>
+            <div class="form-group">
+              <label>
                 <span class="glyphicon glyphicon-user"></span>
                 Sender
               </label>
@@ -56,8 +66,14 @@
 </template>
 
 <script>
+import store from '../store'
+
 export default {
-  props: ['grat']
+  computed: {
+    grat () {
+      return store.state.grat
+    }
+  }
 }
 </script>
 
