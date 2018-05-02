@@ -19,16 +19,32 @@ export default {
       context.error = error
     })
   },
-  Login(context, creds, redirect) {
+  Login(context, creds) {
     axios.post(LOGIN_URL, creds).then( (response) => {
       localStorage.setItem('id_token', response.data.id_token)
 
       var decoded = jwt_decode(response.data.id_token)
       console.log('decoded is ', decoded)
-      if (redirect) {
-        if (decoded.role === "entity") {
-          context.$router.replace('/users/entity/home')          
-        }
+
+      switch (decoded.role) {
+        case 'user':
+          context.$router.replace('/users/home')         
+          break
+        case 'entity':
+          context.$router.replace('/users/entity/home')
+          break
+        case 'business':
+          context.$router.replace('/users/business/home')
+          break
+        case 'team':
+          context.$router.replace('/users/wty-team/home')
+          break
+        case 'admin':
+          context.$router.replace('/users/admin/home')
+          break
+        default:
+          console.log('invalid role received', decoded.role)
+          break
       }
     }, (error) => {
       console.log('login error', error)
