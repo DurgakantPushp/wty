@@ -4,11 +4,15 @@
       <h2> Filter user by sender</h2>
       <label>sender</label>
       <select
-        id="sender"
-        v-for="sender of senders"
-        :key="sender.id"
+        v-model="sender"
       >
-        <option>{{sender}}</option>
+        <option disabled value="">select sender</option>
+        <option
+          v-for="sender of senders"
+          :key="sender.id"
+        >
+          {{sender}}
+        </option>
       </select>
       <button
         class="btn btn-primary"
@@ -27,11 +31,14 @@
       <h2> Filter user by recipient</h2>
       <label>recipient</label>
       <select
-        id="recipient"
-        v-for="recipient of recipients"
-        :key="recipient.id"
+        v-model="recipient"
       >
-        <option>{{recipient}}</option>
+        <option disabled value="">select recipient</option>
+        <option
+          v-for="recipient of recipients"
+          :key="recipient.id">
+          {{recipient}}
+        </option>
       </select>
       <button
         class="btn btn-primary"
@@ -100,13 +107,11 @@ export default {
 
   methods: {
     filterBySender () {
-      this.sender = $('#sender').val()
       console.log('user gratitudes for sender', this.sender)
       store.commit('FilterBySender', this.sender)
       this.sndEnabled = false
     },
     filterByRecipient () {
-      this.recipient = $('#recipient').val()
       console.log('gratitudes received by recipient', this.recipient)
       store.commit('FilterByRecipient', this.recipient)
       this.rcptEnabled = false
