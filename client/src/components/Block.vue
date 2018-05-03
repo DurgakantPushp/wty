@@ -1,20 +1,18 @@
 <template>
-  <div>
-    <tr>
-      <td>#1</td>
-      <td>{{blockData.timestamp}}</td>
-      <td>{{blockData.hash}}</td>
-      <td>{{blockData.prevHash}}</td>
-      <td>
-        <button
-          type="button"
-          class="btn btn-success"
-          @click="showGrat">
-          {{blockData.data}}
-        </button>
-      </td>
-    </tr>
-  </div>
+  <tr>
+    <td>#1</td>
+    <td>{{blockData.timestamp}}</td>
+    <td>{{blockData.hash}}</td>
+    <td>{{blockData.prevHash}}</td>
+    <td>
+      <button
+        type="button"
+        class="btn btn-success"
+        @click="showGrat">
+        {{blockData.data}}
+      </button>
+    </td>
+  </tr>
 </template>
 
 <script>

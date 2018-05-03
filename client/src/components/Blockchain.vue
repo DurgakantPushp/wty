@@ -1,5 +1,18 @@
 <template>
   <div>
+    <div class="container-responsive" style="margin: 20px">
+      <h2> Filter user</h2>
+      <label>user name (sender)</label>
+      <input
+        v-model="userName"
+        placeholder="user name"
+      >
+      <button
+        class="btn btn-primary"
+        @click="userGrats">
+        show Gratitudes
+      </button>
+    </div>
     <table class="w3-table w3-striped w3-bordered w3-border">
       <tr>
         <th>#</th>
@@ -8,11 +21,21 @@
         <th>Prev Hash</th>
         <th>Data</th>
       </tr>
+      <tr>
+        <td>11</td>
+        <td>time1</td>
+        <td>curr enfk</td>
+        <td>prev knkn</td>
+        <td>ddd</td>
+      </tr>
+      <tbody
+        v-for="block of blocks"
+        :key="block.timestamp">
         <block
           :blockData="block"
-          :key="block.timestamp"
-          v-for="block of blocks">
+        >
         </block>
+      </tbody>
         <gratitude />
     </table>
   </div>
@@ -24,6 +47,11 @@ import store from '../store'
 import AdminGratitude from './AdminGratitude'
 
 export default {
+  data () {
+    return {
+      userName: ''
+    }
+  },
   components: {
     block: Block,
     gratitude: AdminGratitude
@@ -32,6 +60,20 @@ export default {
   computed: {
     blocks() {
       return store.state.blocks
+    }
+  },
+  methods: {
+    userGrats () {
+      console.log('user gratitudes for user', this.userName)
+      let tmpBlocks = []
+      for (let block of this.blocks) {
+        let grat = JSON.parse(atob(block.data))
+        if (grat.sender === this.sender) {
+          tmpBlocks.push(block)
+          console.log('block pushed', block)
+        }
+      }
+      this.blocks = tmpBlocks
     }
   }
 }
