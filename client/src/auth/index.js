@@ -72,7 +72,7 @@ function redirect(context, role) {
       context.$router.replace('/users/wty-team/home')
       break
     case 'admin':
-      context.$router.replace('/users/admin/home')
+      context.$router.replace('/admin/home')
       break
     default:
       console.log('invalid role received', role)
