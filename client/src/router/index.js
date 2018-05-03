@@ -62,7 +62,7 @@ export default new Router({
       beforeEnter: (to, from, next) => authHook(to, from, next, 'business')
     },
     {
-      path: '/users/admin/home',
+      path: '/admin/home',
       name: 'admin home',
       component: AdminHome,
       beforeEnter: (to, from, next) => authHook(to, from, next, 'admin')
@@ -81,7 +81,7 @@ export default new Router({
     },
     {
       path: '/admin/blockchain/status',
-      name: 'Guest Home',
+      name: 'blockchain status',
       component: BlockchainStatus,
       beforeEnter: (to, from, next) => authHook(to, from, next, 'admin')
     }
@@ -94,6 +94,8 @@ export default new Router({
 function authHook (to, from, next, role) {
   if (!auth.isAuthenticated(role)) {
     next(false)
+    console.log('not authorized to access this page')
+    this.$router.replace('/home')
   } else {
     next()
     console.log('next called on', role)
