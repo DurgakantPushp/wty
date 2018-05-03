@@ -21,13 +21,6 @@
         <th>Prev Hash</th>
         <th>Data</th>
       </tr>
-      <tr>
-        <td>11</td>
-        <td>time1</td>
-        <td>curr enfk</td>
-        <td>prev knkn</td>
-        <td>ddd</td>
-      </tr>
       <tbody
         v-for="block of blocks"
         :key="block.timestamp">
