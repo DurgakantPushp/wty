@@ -29,8 +29,8 @@
         >
         </block>
       </tbody>
-        <gratitude />
     </table>
+    <gratitude />
   </div>
 </template>
 
