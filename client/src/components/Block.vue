@@ -1,6 +1,6 @@
 <template>
   <tr>
-    <td>#1</td>
+    <td>{{blockData.id}}</td>
     <td>{{blockData.timestamp}}</td>
     <td>{{blockData.hash}}</td>
     <td>{{blockData.prevHash}}</td>

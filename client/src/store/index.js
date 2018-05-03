@@ -25,7 +25,11 @@ const store = new Vuex.Store({
       console.log('blocks received for initialization', sblocks)
       state.blocks = JSON.parse(sblocks)
 
+      let id = 0
       for (let block of state.blocks) {
+        state.blocks[id].id = id + 1
+        id++
+
         let grat = JSON.parse(atob(block.data))
         state.senders.push(grat.sender)
         state.recipients.push(grat.recipient)
@@ -37,6 +41,7 @@ const store = new Vuex.Store({
       console.log('blocks received for update', sblock)
       let block = JSON.parse(sblock)
       state.blocks.push(block)
+      state.blocks[state.blocks.length - 1].id = state.blocks.length
 
       let grat = JSON.parse(atob(block.data))
       state.senders.push(grat.sender)
